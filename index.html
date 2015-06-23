@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='multiSelectApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <div id="localityList">
+        <ul>
+            <li ng-repeat="locality in localities">
+                <input type="checkbox" value="{{locality.city}}" ng-model="locality.isChecked" ng-change="updateList(locality)"> {{locality.city}}
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div id="hospitalList">
+        <ul>
+            <li ng-repeat="hospital in filteredList">
+
+                {{hospital}}</li>
+        </ul>
+        
+
+    </div>
+
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="mainCtrl.js"></script>
+
+
+
+</body>
+
+</html>
