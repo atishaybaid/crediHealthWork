@@ -10,13 +10,32 @@
 
 
 
-    
+
     <div id="cityList">
         <ul>
-            <li ng-repeat="data in details">
-                <input type="checkbox" value="{{data.City}}" ng-model="data.isCityChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isCityEnabled"> {{data.City}}
+            <span>Delhi</span>
+            <li ng-repeat="data in details" ng-if="data.City=='Delhi'">
+                <div>
+                    <input type="checkbox" value="{{data.Area}}" ng-model="data.isAreaChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isAreaEnabled"> {{data.Area}}
             </li>
-        </ul 
+            </div>
+        </ul>
+        <ul>
+            <span>Noida</span>
+            <li ng-repeat="data in details" ng-if="data.City=='Noida'">
+                <div>
+                    <input type="checkbox" value="{{data.Area}}" ng-model="data.isAreaChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isAreaEnabled"> {{data.Area}}
+            </li>
+            </div>
+        </ul>
+        <ul>
+            <span>Gurgaon</span>
+            <li ng-repeat="data in details" ng-if="data.City=='Gurgaon'">
+                <div>
+                    <input type="checkbox" value="{{data.Area}}" ng-model="data.isAreaChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isAreaEnabled"> {{data.Area}}
+            </li>
+            </div>
+        </ul>
     </div>
 
     <div id="hospitalList">

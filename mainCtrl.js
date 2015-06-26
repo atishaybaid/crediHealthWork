@@ -3,7 +3,7 @@ angular.module('multiSelectApp').controller('mainCtrl', mainCtrl);
 function mainCtrl($scope) {
     var checkedCities = [];
     var checkedHospitals = [];
-
+    var checkedAreas=[];
 
 
     $scope.details = [
@@ -15,8 +15,10 @@ function mainCtrl($scope) {
             "Area": "Sector 31",
             isCityEnabled: true,
             isHospitalEnabled: true,
+            isAreaEnabled: true,
             isHospitalChecked: false,
-            isCityChecked: false
+            isCityChecked: false,
+            isAreaChecked:false
 
     },
         {
@@ -27,8 +29,10 @@ function mainCtrl($scope) {
             "Area": "Huda City Center",
             isCityEnabled: true,
             isHospitalEnabled: true,
+            isAreaEnabled: true,
             isHospitalChecked: false,
-            isCityChecked: false
+            isCityChecked: false,
+            isAreaChecked:false
     }, {
             "Name": "Dr. Ram Charan",
             "Specialty": "Neurology",
@@ -37,8 +41,10 @@ function mainCtrl($scope) {
             "Area": "Sarita Vihar",
             isCityEnabled: true,
             isHospitalEnabled: true,
+            isAreaEnabled: true,
             isHospitalChecked: false,
-            isCityChecked: false
+            isCityChecked: false,
+            isAreaChecked:false
 
     },
         {
@@ -49,8 +55,10 @@ function mainCtrl($scope) {
             "Area": "Panchsheel",
             isCityEnabled: true,
             isHospitalEnabled: true,
+            isAreaEnabled: true,
             isHospitalChecked: false,
-            isCityChecked: false
+            isCityChecked: false,
+            isAreaChecked:false
     }, {
             "Name": "Dr. Preeti Saran",
             "Specialty": "Internal Medicine",
@@ -59,8 +67,10 @@ function mainCtrl($scope) {
             "Area": "Shahpur - Sector 128",
             isCityEnabled: true,
             isHospitalEnabled: true,
+            isAreaEnabled: true,
             isHospitalChecked: false,
-            isCityChecked: false
+            isCityChecked: false,
+            isAreaChecked:false
     },
         {
             "Name": "Dr. Fardeen Patwari",
@@ -70,8 +80,10 @@ function mainCtrl($scope) {
             "Area": "Shahpur - Sector 128",
             isCityEnabled: true,
             isHospitalEnabled: true,
+            isAreaEnabled: true,
             isHospitalChecked: false,
-            isCityChecked: false
+            isCityChecked: false,
+            isAreaChecked:false
     }
   ];
 
@@ -82,19 +94,19 @@ function mainCtrl($scope) {
 
 
     $scope.firstFilterChange = function (data) {
-        var city = data.City;
-        if (data.isCityChecked) {
-            checkedCities.push(city)
+        var area = data.Area;
+        if (data.isAreaChecked) {
+            checkedAreas.push(area)
         } else {
-            checkedCities.splice(checkedCities.indexOf(city), 1);
+            checkedAreas.splice(checkedAreas.indexOf(area), 1);
         };
         for (var i in $scope.details) {
-            if (checkedCities.indexOf($scope.details[i].City) != -1) {
+            if (checkedAreas.indexOf($scope.details[i].Area) != -1) {
                 $scope.details[i].isHospitalEnabled = true;
             } else {
                 $scope.details[i].isHospitalEnabled = false;
             };
-            if (checkedCities.length == 0) {
+            if (checkedAreas.length == 0) {
                 for (var i in $scope.details) {
                     $scope.details[i].isHospitalEnabled = true;
                 }
@@ -117,13 +129,13 @@ function mainCtrl($scope) {
         };
         for (var i in $scope.details) {
             if (checkedHospitals.indexOf($scope.details[i].Hospital_Name) != -1) {
-                $scope.details[i].isCityEnabled = true;
+                $scope.details[i].isAreaEnabled = true;
             } else {
-                $scope.details[i].isCityEnabled = false;
+                $scope.details[i].isAreaEnabled = false;
             };
             if (checkedHospitals.length == 0) {
                 for (var i in $scope.details) {
-                    $scope.details[i].isCityEnabled = true;
+                    $scope.details[i].isEnabled = true;
                 }
 
             }
