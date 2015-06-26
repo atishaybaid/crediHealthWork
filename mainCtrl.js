@@ -1,86 +1,122 @@
 angular.module('multiSelectApp').controller('mainCtrl', mainCtrl);
 
 function mainCtrl($scope) {
-    $scope.selectedLocalities = [];
-    $scope.filteredList = [];
 
+   
 
+    $scope.details = [
+        {
+            "Name": "Dr. Atul Kumar",
+            "Specialty": "Internal Medicine",
+            "Hospital_Name": "Max Medcenter",
+            "City": "Gurgaon",
+            "Area": "Sector 31",
+            isCityEnabled: false,
+            isHospitalEnabed: false,
+            isHospitalChecked: false,
+            isCityChecked: false
 
-
-    console.log("controller working");
-
-    $scope.localities = [{
-        city: 'Gurgaon',
-        isChecked: false
+    },
+        {
+            "Name": "Dr. Vishesh Bhatia",
+            "Specialty": "Orthopaedics",
+            "Hospital_Name": "Fortis Memorial Research Institute",
+            "City": "Gurgaon",
+            "Area": "Huda City Center",
+            isCityEnabled: false,
+            isHospitalEnabed: false,
+            isHospitalChecked: false,
+            isCityChecked: false
     }, {
-        city: 'Delhi',
-        isChecked: false
-    }, {
-        city: 'Noida',
-        isChecked: false
-    }];
+            "Name": "Dr. Ram Charan",
+            "Specialty": "Neurology",
+            "Hospital_Name": "Apollo Hospitals",
+            "City": "Delhi",
+            "Area": "Sarita Vihar",
+            isCityEnabled: false,
+            isHospitalEnabed: false,
+            isHospitalChecked: false,
+            isCityChecked: false
 
-    $scope.hospitals = [{
-            name: 'AIMS',
-            locality: 'Delhi'
-                }, {
-            name: 'Forits',
-            locality: 'Noida'
-                }, {
-            name: 'Kailash',
-            locality: 'Noida'
-                }, {
-            name: 'MAX',
-            locality: 'Gurgaon'
-        }, {
-            name: 'Ashwini',
-            locality: 'Delhi'
-                }, {
-            name: 'Dds',
-            locality: 'Noida'
-                }, {
-            name: 'Jaypee',
-            locality: 'Noida'
-                }, {
-            name: 'Guardian',
-            locality: 'Gurgaon'
-        }
-                    ];
+    },
+        {
+            "Name": "Dr. (Col) A P Shekhawat",
+            "Specialty": "Internal Medicine",
+            "Hospital_Name": "Max Hospital",
+            "City": "Delhi",
+            "Area": "Panchsheel",
+            isCityEnabled: false,
+            isHospitalEnabed: false,
+            isHospitalChecked: false,
+            isCityChecked: false
+    }, {
+            "Name": "Dr. Preeti Saran",
+            "Specialty": "Internal Medicine",
+            "Hospital_Name": "Asha Multi-specialty Hospital",
+            "City": "Noida",
+            "Area": "Shahpur - Sector 128",
+            isCityEnabled: false,
+            isHospitalEnabed: false,
+            isHospitalChecked: false,
+            isCityChecked: false
+    },
+        {
+            "Name": "Dr. Fardeen Patwari",
+            "Specialty": "Internal Medicine",
+            "Hospital_Name": "Asha Multi-specialty Hospital",
+            "City": "Noida",
+            "Area": "Shahpur - Sector 128",
+            isCityEnabled: false,
+            isHospitalEnabed: false,
+            isHospitalChecked: false,
+            isCityChecked: false
+    }
+  ];
+
+
+
+
 
     
-    $scope.hospitals.forEach(function(hospital){
-         $scope.filteredList.push(hospital.name);
-    });
 
-
-    $scope.updateList = function (locality) {
-        $scope.filteredList = [];
-        console.log("inside  updateList");
-        console.log(locality);
-        console.log($scope.selectedLocalities);
-        if (locality.isChecked) {
-            $scope.selectedLocalities.push(locality.city);
-
+    $scope.firstFilterChange = function (data) {
+        var city = data.City;
+        if (data.isCityChecked) {
+            for (var i in $scope.details) {
+                if ($scope.details[i].City == city) {
+                    $scope.details[i].isHospitalEnabed = true;
+                }
+            }
         } else {
-            var index = $scope.selectedLocalities.indexOf(locality.city);
-            $scope.selectedLocalities.splice(index, 1);
-
+            for (var i in $scope.details) {
+                if ($scope.details[i].City == city) {
+                    $scope.details[i].isHospitalEnabed = false;
+                }
+            };
 
         };
-        $scope.hospitals.forEach(function (hospital) {
-            if ($scope.selectedLocalities.indexOf(hospital.locality) != -1) {
-                if ($scope.filteredList.indexOf(hospital.name) == -1) {
-                    $scope.filteredList.push(hospital.name);
+    };
+    
+     $scope.secondFilterChange = function (data) {
+         console.log("in");
+        var Hospital_Name = data.Hospital_Name;
+         console.log(data.isHospitalChecked);
+        if (data.isHospitalChecked) {
+            for (var i in $scope.details) {
+                if ($scope.details[i].Hospital_Name == Hospital_Name) {
+                    $scope.details[i].isCityEnabed = true;
                 }
-
             }
-        });
+        } else {
+            for (var i in $scope.details) {
+                if ($scope.details[i].Hospital_Name == Hospital_Name) {
+                    $scope.details[i].isCityEnabed = true;
+                }
+            };
+
+        };
+    };
 
 
-
-
-
-
-    }
 
 }

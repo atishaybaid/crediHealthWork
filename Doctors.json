@@ -1,0 +1,117 @@
+{
+  "doctors":
+  [
+    {
+      "Name": "Dr. Atul Kumar",
+      "Specialty": "Internal Medicine",
+      "Hospital Name": "Max Medcenter",
+      "City": "Gurgaon",
+      "Area": "Sector 31"
+    },
+    {
+      "Name": "Dr. Vishesh Bhatia",
+      "Specialty": "Orthopaedics",
+      "Hospital Name": "Fortis Memorial Research Institute",
+      "City": "Gurgaon",
+      "Area": "Huda City Center"
+    },
+    {
+      "Name": "Dr. Madhu Srivastav",
+      "Specialty": "Orthopaedics",
+      "Hospital Name": "Max Medcenter",
+      "City": "Gurgaon",
+      "Area": "Sector 31"
+    },
+    {
+      "Name": "Dr. Ram Charan",
+      "Specialty": "Neurology",
+      "Hospital Name": "Apollo Hospitals",
+      "City": "Delhi",
+      "Area": "Sarita Vihar"
+    },
+    {
+      "Name": "Dr. (Col) A P Shekhawat",
+      "Specialty": "Internal Medicine",
+      "Hospital Name": "Max Hospital",
+      "City": "Delhi",
+      "Area": "Panchsheel"
+    },
+    {
+      "Name": "Dr. Vineeta Malik",
+      "Specialty": "Oncology",
+      "Hospital Name": "Fortis Memorial Research Institute",
+      "City": "Gurgaon",
+      "Area": "Huda City Center"
+    },
+    {
+      "Name": "Dr. Lijo Joesph",
+      "Specialty": "Internal Medicine",
+      "Hospital Name": "Max Hospital",
+      "City": "Delhi",
+      "Area": "Panchsheel"
+    },
+    {
+      "Name": "Dr. Amit Trivedi",
+      "Specialty": "Oncology",
+      "Hospital Name": "Max Hospital",
+      "City": "Delhi",
+      "Area": "Saket"
+    },
+    {
+      "Name": "Dr. Himanshu Yadav",
+      "Specialty": "Paediatrics",
+      "Hospital Name": "Apollo Hospitals",
+      "City": "Delhi",
+      "Area": "Sarita Vihar"
+    },
+    {
+      "Name": "Dr. Dharamveer Chaudhary",
+      "Specialty": "Neurology",
+      "Hospital Name": "Fortis Hospital",
+      "City": "Noida",
+      "Area": "Sector 62"
+    },
+    {
+      "Name": "Dr. Mohd. Aslam",
+      "Specialty": "Paediatrics",
+      "Hospital Name": "Fortis Hospital",
+      "City": "Noida",
+      "Area": "Sector 62"
+    },
+    {
+      "Name": "Dr. Gitanjali Bhat",
+      "Specialty": "Neurology",
+      "Hospital Name": "Fortis Hospital",
+      "City": "Noida",
+      "Area": "Sector 62"
+    },
+    {
+      "Name": "Dr. Gitanjali Bhat",
+      "Specialty": "Neurology",
+      "Hospital Name": "Asha Multi-specialty Hospital",
+      "City": "Noida",
+      "Area": "Shahpur - Sector 128"
+    },
+    {
+      "Name": "Dr. Prem Vats",
+      "Specialty": "Ophthalmology",
+      "Hospital Name": "Asha Multi-specialty Hospital",
+      "City": "Noida",
+      "Area": "Shahpur - Sector 128"
+    },
+    {
+      "Name": "Dr. Preeti Saran",
+      "Specialty": "Internal Medicine",
+      "Hospital Name": "Asha Multi-specialty Hospital",
+      "City": "Noida",
+      "Area": "Shahpur - Sector 128"
+    },
+    {
+      "Name": "Dr. Fardeen Patwari",
+      "Specialty": "Internal Medicine",
+      "Hospital Name": "Asha Multi-specialty Hospital",
+      "City": "Noida",
+      "Area": "Shahpur - Sector 128"
+    }
+  ]
+}
