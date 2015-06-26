@@ -10,28 +10,31 @@
 
 
 
-
+    
     <div id="cityList">
         <ul>
             <li ng-repeat="data in details">
-                <input type="checkbox" value="{{data.City}}" ng-model="data.isCityChecked" ng-change="firstFilterChange(data)"> {{data}}
+                <input type="checkbox" value="{{data.City}}" ng-model="data.isCityChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isCityEnabled"> {{data.City}}
             </li>
-        </ul </div>
+        </ul 
+    </div>
 
-        <div id="hospitalList">
-            <ul>
-                <li ng-repeat="data in details">
-
-                    <input type="checkbox" value="{{data.Hospital_Name}}" ng-model="data.isHospitalChecked" ng-change="secondFilterChange(data)">{{data}}</li>
-            </ul>
+    <div id="hospitalList">
+        <ul>
+            <li ng-repeat="data in details">
 
 
-        </div>
+
+                <input type="checkbox" value="{{data.Hospital_Name}}" ng-model="data.isHospitalChecked" ng-change="secondFilterChange(data)" ng-disabled="!data.isHospitalEnabled">{{data.Hospital_Name}}</li>
+        </ul>
 
 
-        <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
-        <script type="text/javascript" src="mainCtrl.js"></script>
+    </div>
+
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="mainCtrl.js"></script>
 
 
 

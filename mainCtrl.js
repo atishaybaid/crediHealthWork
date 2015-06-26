@@ -1,8 +1,10 @@
 angular.module('multiSelectApp').controller('mainCtrl', mainCtrl);
 
 function mainCtrl($scope) {
+    var checkedCities = [];
+    var checkedHospitals = [];
 
-   
+
 
     $scope.details = [
         {
@@ -11,8 +13,8 @@ function mainCtrl($scope) {
             "Hospital_Name": "Max Medcenter",
             "City": "Gurgaon",
             "Area": "Sector 31",
-            isCityEnabled: false,
-            isHospitalEnabed: false,
+            isCityEnabled: true,
+            isHospitalEnabled: true,
             isHospitalChecked: false,
             isCityChecked: false
 
@@ -23,8 +25,8 @@ function mainCtrl($scope) {
             "Hospital_Name": "Fortis Memorial Research Institute",
             "City": "Gurgaon",
             "Area": "Huda City Center",
-            isCityEnabled: false,
-            isHospitalEnabed: false,
+            isCityEnabled: true,
+            isHospitalEnabled: true,
             isHospitalChecked: false,
             isCityChecked: false
     }, {
@@ -33,8 +35,8 @@ function mainCtrl($scope) {
             "Hospital_Name": "Apollo Hospitals",
             "City": "Delhi",
             "Area": "Sarita Vihar",
-            isCityEnabled: false,
-            isHospitalEnabed: false,
+            isCityEnabled: true,
+            isHospitalEnabled: true,
             isHospitalChecked: false,
             isCityChecked: false
 
@@ -45,8 +47,8 @@ function mainCtrl($scope) {
             "Hospital_Name": "Max Hospital",
             "City": "Delhi",
             "Area": "Panchsheel",
-            isCityEnabled: false,
-            isHospitalEnabed: false,
+            isCityEnabled: true,
+            isHospitalEnabled: true,
             isHospitalChecked: false,
             isCityChecked: false
     }, {
@@ -55,8 +57,8 @@ function mainCtrl($scope) {
             "Hospital_Name": "Asha Multi-specialty Hospital",
             "City": "Noida",
             "Area": "Shahpur - Sector 128",
-            isCityEnabled: false,
-            isHospitalEnabed: false,
+            isCityEnabled: true,
+            isHospitalEnabled: true,
             isHospitalChecked: false,
             isCityChecked: false
     },
@@ -66,8 +68,8 @@ function mainCtrl($scope) {
             "Hospital_Name": "Asha Multi-specialty Hospital",
             "City": "Noida",
             "Area": "Shahpur - Sector 128",
-            isCityEnabled: false,
-            isHospitalEnabed: false,
+            isCityEnabled: true,
+            isHospitalEnabled: true,
             isHospitalChecked: false,
             isCityChecked: false
     }
@@ -77,44 +79,56 @@ function mainCtrl($scope) {
 
 
 
-    
+
 
     $scope.firstFilterChange = function (data) {
         var city = data.City;
         if (data.isCityChecked) {
-            for (var i in $scope.details) {
-                if ($scope.details[i].City == city) {
-                    $scope.details[i].isHospitalEnabed = true;
-                }
-            }
+            checkedCities.push(city)
         } else {
-            for (var i in $scope.details) {
-                if ($scope.details[i].City == city) {
-                    $scope.details[i].isHospitalEnabed = false;
-                }
-            };
-
+            checkedCities.splice(checkedCities.indexOf(city), 1);
         };
+        for (var i in $scope.details) {
+            if (checkedCities.indexOf($scope.details[i].City) != -1) {
+                $scope.details[i].isHospitalEnabled = true;
+            } else {
+                $scope.details[i].isHospitalEnabled = false;
+            };
+            if (checkedCities.length == 0) {
+                for (var i in $scope.details) {
+                    $scope.details[i].isHospitalEnabled = true;
+                }
+
+            }
+
+        }
+        console.log($scope.details);
     };
-    
-     $scope.secondFilterChange = function (data) {
-         console.log("in");
-        var Hospital_Name = data.Hospital_Name;
-         console.log(data.isHospitalChecked);
-        if (data.isHospitalChecked) {
-            for (var i in $scope.details) {
-                if ($scope.details[i].Hospital_Name == Hospital_Name) {
-                    $scope.details[i].isCityEnabed = true;
-                }
-            }
-        } else {
-            for (var i in $scope.details) {
-                if ($scope.details[i].Hospital_Name == Hospital_Name) {
-                    $scope.details[i].isCityEnabed = true;
-                }
-            };
 
+    $scope.secondFilterChange = function (data) {
+        console.log(data);
+        var Hospital_Name = data.Hospital_Name;
+        console.log(data.isHospitalChecked);
+        if (data.isHospitalChecked) {
+            console.log("inside iff");
+            checkedHospitals.push(Hospital_Name);
+        } else {
+            checkedHospitals.splice(checkedHospitals.indexOf(Hospital_Name), 1);
         };
+        for (var i in $scope.details) {
+            if (checkedHospitals.indexOf($scope.details[i].Hospital_Name) != -1) {
+                $scope.details[i].isCityEnabled = true;
+            } else {
+                $scope.details[i].isCityEnabled = false;
+            };
+            if (checkedHospitals.length == 0) {
+                for (var i in $scope.details) {
+                    $scope.details[i].isCityEnabled = true;
+                }
+
+            }
+
+        }
     };
 
 
