@@ -1,92 +1,37 @@
 angular.module('multiSelectApp').controller('mainCtrl', mainCtrl);
 
-function mainCtrl($scope) {
+function mainCtrl($scope, dataFetchService) {
     var checkedCities = [];
     var checkedHospitals = [];
-    var checkedAreas=[];
+    var checkedAreas = [];
+    $scope.delhiCount;
+    $scope.noidaCount;
+    $scope.gurgaonCount;
+    
+    
+
+   
 
 
-    $scope.details = [
-        {
-            "Name": "Dr. Atul Kumar",
-            "Specialty": "Internal Medicine",
-            "Hospital_Name": "Max Medcenter",
-            "City": "Gurgaon",
-            "Area": "Sector 31",
-            isCityEnabled: true,
-            isHospitalEnabled: true,
-            isAreaEnabled: true,
-            isHospitalChecked: false,
-            isCityChecked: false,
-            isAreaChecked:false
 
-    },
-        {
-            "Name": "Dr. Vishesh Bhatia",
-            "Specialty": "Orthopaedics",
-            "Hospital_Name": "Fortis Memorial Research Institute",
-            "City": "Gurgaon",
-            "Area": "Huda City Center",
-            isCityEnabled: true,
-            isHospitalEnabled: true,
-            isAreaEnabled: true,
-            isHospitalChecked: false,
-            isCityChecked: false,
-            isAreaChecked:false
-    }, {
-            "Name": "Dr. Ram Charan",
-            "Specialty": "Neurology",
-            "Hospital_Name": "Apollo Hospitals",
-            "City": "Delhi",
-            "Area": "Sarita Vihar",
-            isCityEnabled: true,
-            isHospitalEnabled: true,
-            isAreaEnabled: true,
-            isHospitalChecked: false,
-            isCityChecked: false,
-            isAreaChecked:false
+    
+dataFetchService.getCurrentData().then(function (data) {
+            
+             $scope.details = data.doctors;
+            $scope.delhiCount = data.info.count.delhi;
+                $scope.noidaCount = data.info.count.noida;
+                        $scope.gurgaonCount = data.info.count.gurgaon;
 
-    },
-        {
-            "Name": "Dr. (Col) A P Shekhawat",
-            "Specialty": "Internal Medicine",
-            "Hospital_Name": "Max Hospital",
-            "City": "Delhi",
-            "Area": "Panchsheel",
-            isCityEnabled: true,
-            isHospitalEnabled: true,
-            isAreaEnabled: true,
-            isHospitalChecked: false,
-            isCityChecked: false,
-            isAreaChecked:false
-    }, {
-            "Name": "Dr. Preeti Saran",
-            "Specialty": "Internal Medicine",
-            "Hospital_Name": "Asha Multi-specialty Hospital",
-            "City": "Noida",
-            "Area": "Shahpur - Sector 128",
-            isCityEnabled: true,
-            isHospitalEnabled: true,
-            isAreaEnabled: true,
-            isHospitalChecked: false,
-            isCityChecked: false,
-            isAreaChecked:false
-    },
-        {
-            "Name": "Dr. Fardeen Patwari",
-            "Specialty": "Internal Medicine",
-            "Hospital_Name": "Asha Multi-specialty Hospital",
-            "City": "Noida",
-            "Area": "Shahpur - Sector 128",
-            isCityEnabled: true,
-            isHospitalEnabled: true,
-            isAreaEnabled: true,
-            isHospitalChecked: false,
-            isCityChecked: false,
-            isAreaChecked:false
-    }
-  ];
 
+            console.log(data.info.count.delhi);
+    
+            console.log($scope.details);
+        }, function (reject) {
+            console.log("rejection");
+        });
+
+
+   
 
 
 
@@ -94,6 +39,7 @@ function mainCtrl($scope) {
 
 
     $scope.firstFilterChange = function (data) {
+        console.log("inside ffc");
         var area = data.Area;
         if (data.isAreaChecked) {
             checkedAreas.push(area)
@@ -116,6 +62,9 @@ function mainCtrl($scope) {
         }
         console.log($scope.details);
     };
+
+
+
 
     $scope.secondFilterChange = function (data) {
         console.log(data);
@@ -143,6 +92,27 @@ function mainCtrl($scope) {
         }
     };
 
+    $scope.resetButton = function () {
+        console.log("hswc");
+        for(i in $scope.details){
+            $scope.details[i].isCityEnabled=true,
+            $scope.details[i].isHospitalEnabled= true,
+            $scope.details[i].isAreaEnabled= true,
+            $scope.details[i].isHospitalChecked= false,
+            $scope.details[i].isCityChecked= false,
+            $scope.details[i].isAreaChecked= false
+        }
+        
+        
+        
+    };
+
+
+
+
+
 
 
 }
+
+

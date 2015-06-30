@@ -1,1 +1,1 @@
-angular.module('multiSelectApp',[]);
+var app =angular.module('multiSelectApp',[]);

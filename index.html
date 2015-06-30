@@ -12,24 +12,24 @@
 
 
     <div id="cityList">
-        <ul>
-            <span>Delhi</span>
+        <ul style="list-style-type: none;">
+            <span>Delhi({{delhiCount}})</span>
             <li ng-repeat="data in details" ng-if="data.City=='Delhi'">
                 <div>
-                    <input type="checkbox" value="{{data.Area}}" ng-model="data.isAreaChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isAreaEnabled"> {{data.Area}}
+                    <input type="checkbox" value="{{data.Area}}" class"delhiCheckBox" ng-model="data.isAreaChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isAreaEnabled"> {{data.Area}}
             </li>
             </div>
         </ul>
-        <ul>
-            <span>Noida</span>
+        <ul style="list-style-type: none;">
+            <span>Noida({{noidaCount}})</span>
             <li ng-repeat="data in details" ng-if="data.City=='Noida'">
                 <div>
                     <input type="checkbox" value="{{data.Area}}" ng-model="data.isAreaChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isAreaEnabled"> {{data.Area}}
             </li>
             </div>
         </ul>
-        <ul>
-            <span>Gurgaon</span>
+        <ul style="list-style-type: none;">
+            <span>Gurgaon({{gurgaonCount}})</span>
             <li ng-repeat="data in details" ng-if="data.City=='Gurgaon'">
                 <div>
                     <input type="checkbox" value="{{data.Area}}" ng-model="data.isAreaChecked" ng-change="firstFilterChange(data)" ng-disabled="!data.isAreaEnabled"> {{data.Area}}
@@ -39,7 +39,7 @@
     </div>
 
     <div id="hospitalList">
-        <ul>
+        <ul style="list-style-type: none;">
             <li ng-repeat="data in details">
 
 
@@ -49,12 +49,15 @@
 
 
     </div>
+    
+    <input type="button" value="Reset All" ng-click="resetButton()">
 
 
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="mainCtrl.js"></script>
-
+    <script type="text/javascript" src="dataFetchService.js"></script>
+    
 
 
 </body>

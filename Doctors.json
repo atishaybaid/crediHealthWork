@@ -1,117 +1,114 @@
 {
-  "doctors":
-  [
-    {
-      "Name": "Dr. Atul Kumar",
-      "Specialty": "Internal Medicine",
-      "Hospital Name": "Max Medcenter",
-      "City": "Gurgaon",
-      "Area": "Sector 31"
+    "doctors": [
+        {
+            "Name": "Dr. Vishesh Bhatia",
+            "Specialty": "Orthopaedics",
+            "Hospital_Name": "Fortis Memorial Research Institute",
+            "City": "Gurgaon",
+            "Area": "Huda City Center",
+            "isCityEnabled": "true",
+            "isHospitalEnabled": "true",
+            "isAreaEnabled": "true",
+            "isHospitalChecked": "false",
+            "isCityChecked": "false",
+            "isAreaChecked": "false"
     },
-    {
-      "Name": "Dr. Vishesh Bhatia",
-      "Specialty": "Orthopaedics",
-      "Hospital Name": "Fortis Memorial Research Institute",
-      "City": "Gurgaon",
-      "Area": "Huda City Center"
+        {
+            "Name": "Dr. Madhu Srivastav",
+            "Specialty": "Orthopaedics",
+            "Hospital_Name": "Max Medcenter",
+            "City": "Gurgaon",
+            "Area": "Sector 31",
+            "isCityEnabled": "true",
+            "isHospitalEnabled": "true",
+            "isAreaEnabled": "true",
+            "isHospitalChecked": "false",
+            "isCityChecked": "false",
+            "isAreaChecked": "false"
     },
-    {
-      "Name": "Dr. Madhu Srivastav",
-      "Specialty": "Orthopaedics",
-      "Hospital Name": "Max Medcenter",
-      "City": "Gurgaon",
-      "Area": "Sector 31"
+
+
+
+        {
+            "Name": "Dr. Lijo Joesph",
+            "Specialty": "Internal Medicine",
+            "Hospital_Name": "Max Hospital",
+            "City": "Delhi",
+            "Area": "Panchsheel",
+            "isCityEnabled": "true",
+            "isHospitalEnabled": "true",
+            "isAreaEnabled": "true",
+            "isHospitalChecked": "false",
+            "isCityChecked": "false",
+            "isAreaChecked": "false"
     },
-    {
-      "Name": "Dr. Ram Charan",
-      "Specialty": "Neurology",
-      "Hospital Name": "Apollo Hospitals",
-      "City": "Delhi",
-      "Area": "Sarita Vihar"
+        {
+            "Name": "Dr. Amit Trivedi",
+            "Specialty": "Oncology",
+            "Hospital_Name": "Max Hospital",
+            "City": "Delhi",
+            "Area": "Saket",
+            "isCityEnabled": "true",
+            "isHospitalEnabled": "true",
+            "isAreaEnabled": "true",
+            "isHospitalChecked": "false",
+            "isCityChecked": "false",
+            "isAreaChecked": "false"
     },
-    {
-      "Name": "Dr. (Col) A P Shekhawat",
-      "Specialty": "Internal Medicine",
-      "Hospital Name": "Max Hospital",
-      "City": "Delhi",
-      "Area": "Panchsheel"
+        {
+            "Name": "Dr. Himanshu Yadav",
+            "Specialty": "Paediatrics",
+            "Hospital_Name": "Apollo Hospitals",
+            "City": "Delhi",
+            "Area": "Sarita Vihar",
+            "isCityEnabled": "true",
+            "isHospitalEnabled": "true",
+            "isAreaEnabled": "true",
+            "isHospitalChecked": "false",
+            "isCityChecked": "false",
+            "isAreaChecked": "false"
     },
-    {
-      "Name": "Dr. Vineeta Malik",
-      "Specialty": "Oncology",
-      "Hospital Name": "Fortis Memorial Research Institute",
-      "City": "Gurgaon",
-      "Area": "Huda City Center"
+
+
+        {
+            "Name": "Dr. Gitanjali Bhat",
+            "Specialty": "Neurology",
+            "Hospital_Name": "Fortis Hospital",
+            "City": "Noida",
+            "Area": "Sector 62",
+            "isCityEnabled": "true",
+            "isHospitalEnabled": "true",
+            "isAreaEnabled": "true",
+            "isHospitalChecked": "false",
+            "isCityChecked": "false",
+            "isAreaChecked": "false"
     },
-    {
-      "Name": "Dr. Lijo Joesph",
-      "Specialty": "Internal Medicine",
-      "Hospital Name": "Max Hospital",
-      "City": "Delhi",
-      "Area": "Panchsheel"
-    },
-    {
-      "Name": "Dr. Amit Trivedi",
-      "Specialty": "Oncology",
-      "Hospital Name": "Max Hospital",
-      "City": "Delhi",
-      "Area": "Saket"
-    },
-    {
-      "Name": "Dr. Himanshu Yadav",
-      "Specialty": "Paediatrics",
-      "Hospital Name": "Apollo Hospitals",
-      "City": "Delhi",
-      "Area": "Sarita Vihar"
-    },
-    {
-      "Name": "Dr. Dharamveer Chaudhary",
-      "Specialty": "Neurology",
-      "Hospital Name": "Fortis Hospital",
-      "City": "Noida",
-      "Area": "Sector 62"
-    },
-    {
-      "Name": "Dr. Mohd. Aslam",
-      "Specialty": "Paediatrics",
-      "Hospital Name": "Fortis Hospital",
-      "City": "Noida",
-      "Area": "Sector 62"
-    },
-    {
-      "Name": "Dr. Gitanjali Bhat",
-      "Specialty": "Neurology",
-      "Hospital Name": "Fortis Hospital",
-      "City": "Noida",
-      "Area": "Sector 62"
-    },
-    {
-      "Name": "Dr. Gitanjali Bhat",
-      "Specialty": "Neurology",
-      "Hospital Name": "Asha Multi-specialty Hospital",
-      "City": "Noida",
-      "Area": "Shahpur - Sector 128"
-    },
-    {
-      "Name": "Dr. Prem Vats",
-      "Specialty": "Ophthalmology",
-      "Hospital Name": "Asha Multi-specialty Hospital",
-      "City": "Noida",
-      "Area": "Shahpur - Sector 128"
-    },
-    {
-      "Name": "Dr. Preeti Saran",
-      "Specialty": "Internal Medicine",
-      "Hospital Name": "Asha Multi-specialty Hospital",
-      "City": "Noida",
-      "Area": "Shahpur - Sector 128"
-    },
-    {
-      "Name": "Dr. Fardeen Patwari",
-      "Specialty": "Internal Medicine",
-      "Hospital Name": "Asha Multi-specialty Hospital",
-      "City": "Noida",
-      "Area": "Shahpur - Sector 128"
+        {
+            "Name": "Dr. Gitanjali Bhat",
+            "Specialty": "Neurology",
+            "Hospital_Name": "Asha Multi-specialty Hospital",
+            "City": "Noida",
+            "Area": "Shahpur - Sector 128",
+            "isCityEnabled": "true",
+            "isHospitalEnabled": "true",
+            "isAreaEnabled": "true",
+            "isHospitalChecked": "false",
+            "isCityChecked": "false",
+            "isAreaChecked": "false"
     }
-  ]
+
+
+
+
+
+  ],
+    "info": {
+        "count": {
+            "delhi": 3,
+            "noida": 2,
+            "gurgaon": 2
+
+        }
+    }
+    
 }
