@@ -1,0 +1,18 @@
+.inputBox{
+    width: 250px;
+  height: 40px;
+}
+
+.inputBox::-webkit-input-placeholder{
+
+     -webkit-transition: all .5s ease-in-out;
+    
+}
+
+
+.inputBox:focus::-webkit-input-placeholder{
+    font-size: 10px;
+    transform: translate(0,-15px);
+    color: blue;
+    
+}
