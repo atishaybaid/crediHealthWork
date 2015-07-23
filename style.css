@@ -10,13 +10,13 @@
 }
 
 
-/*.inputBox:focus::-webkit-input-placeholder{
+.inputBox:focus::-webkit-input-placeholder{
     font-size: 10px;
     transform: translate(0,-15px);
     color: blue;
     visibility: visible !important;
     
-}*/
+}
 
 .inputBox:valid::-webkit-input-placeholder{
     font-size: 10px;
