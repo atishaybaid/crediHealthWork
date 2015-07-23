@@ -5,15 +5,22 @@
 
 .inputBox::-webkit-input-placeholder{
 
-     -webkit-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
       
 }
 
 
-.inputBox:focus::-webkit-input-placeholder{
+/*.inputBox:focus::-webkit-input-placeholder{
     font-size: 10px;
     transform: translate(0,-15px);
     color: blue;
     visibility: visible !important;
     
+}*/
+
+.inputBox:valid::-webkit-input-placeholder{
+    font-size: 10px;
+    transform: translate(0,-15px);
+    color: blue;
+    visibility: visible !important;
 }
