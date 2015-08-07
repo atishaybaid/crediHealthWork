@@ -1,0 +1,26 @@
+.container{
+	width: 200px;
+}
+
+.formly-field{
+	color: blue;
+}
+
+.inputBox::-webkit-input-placeholder{
+
+    -webkit-transition: all .5s ease-in-out;
+      
+}
+
+
+.inputBox:focus::-webkit-input-placeholder{
+    font-size: 10px;
+    transform: translate(0,-15px);
+    color: blue;
+    visibility: visible !important;
+    
+}
+.formly-field {
+  /* for example, give some space between your fields */
+  margin-bottom: 16px;
+}

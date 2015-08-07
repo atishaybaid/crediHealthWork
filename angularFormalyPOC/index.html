@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head ng-app="formlyApp">
+<html lang="en" ng-app="formlyApp">
+<head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src="node_modules/api-check/dist/api-check.js"></script>
@@ -14,14 +14,21 @@
 	
 	<script src="app.js"></script>
     <script src="scripts/MainController.js"></script>
-    <script src="scripts/province.js"></script>
-
-
-
-
 
 </head>
-<body ng-controller="MainController as vm">
+<body ng-controller="MainController">
+<h3>formlyForm</h3>
+
+{{chk}}
+
+<div class="container">
+
+	<formly-form model="feedBack" fields="feedBackFields" form="feedBackForm">
+	fcs
+	</formly-form>	
+
+</div>
+
 	
 </body>
 </html>
